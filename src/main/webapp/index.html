@@ -3,9 +3,57 @@
     <head>
         <title>Moda Global</title>
         <meta charset="UTF-8">
+        <style>
+            #fieldgroup {
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+            }
+            #fieldgroup label {
+                display: inline-block;
+                width: 150px;
+                text-align: right;
+                padding-right: 15px;
+            }
+            #fieldgroup input, #fieldgroup textarea {
+                width: 250px;
+            }
+            #fieldgroup div {
+                display: flex;
+            }
+        </style>
+        <script src="static/js/contacte.js"></script>
     </head>
     <body>
         <h1>Moda Global</h1>
         Martí Carreras Monteagudo
+        <section id="contacte">
+            <form>
+                <fieldset>
+                    <legend><h2>Contacte</h2></legend>
+                    <div id="fieldgroup">
+                        <div>
+                            <label for="nom">Nom</label>
+                            <input id="nom" type="text" name="nom">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input id="email" type="text" name="email">
+                        </div>
+                        <div>
+                            <label for="missatge">Missatge</label>
+                            <textarea
+                                id="missatge"
+                                name="missatge"
+                                rows="10"></textarea>
+                        </div>
+                        <div>
+                            <label></label>
+                            <button id="envia" type="button">Envia</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
     </body>
 </html>
